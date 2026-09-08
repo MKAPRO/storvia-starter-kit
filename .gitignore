@@ -1,0 +1,116 @@
+# =========================================================
+# STORVIA Starter Kit — Repository Ignore Rules
+# =========================================================
+
+# OS / editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local AI / assistant tooling
+**/.agents/
+**/.codex/
+**/.cursor/
+**/AGENTS.md
+**/CLAUDE.md
+
+# Logs / temp / local backups
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.patch
+*.diff
+
+# Archives / database exports
+*.sql
+*.dump
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# Secrets / environment files — examples stay tracked
+.env
+.env.*
+!.env.example
+apps/api/.env
+apps/api/.env.*
+!apps/api/.env.example
+apps/web/.env
+apps/web/.env.*
+!apps/web/.env.example
+
+# Credentials / private keys
+**/auth.json
+*.pem
+*.p12
+*.pfx
+*.key
+
+# Laravel API
+apps/api/vendor/
+apps/api/node_modules/
+apps/api/.phpunit.cache/
+apps/api/.phpunit.result.cache
+apps/api/public/build/
+apps/api/public/hot
+apps/api/public/storage
+apps/api/bootstrap/cache/*
+!apps/api/bootstrap/cache/.gitignore
+apps/api/database/*.sqlite*
+
+# STORVIA runtime storage — keep directory sentinels only
+apps/api/storage/app/private/*
+!apps/api/storage/app/private/.gitignore
+apps/api/storage/app/public/*
+!apps/api/storage/app/public/.gitignore
+apps/api/storage/framework/cache/data/*
+!apps/api/storage/framework/cache/data/.gitignore
+apps/api/storage/framework/sessions/*
+!apps/api/storage/framework/sessions/.gitignore
+apps/api/storage/framework/testing/*
+!apps/api/storage/framework/testing/.gitignore
+apps/api/storage/framework/views/*
+!apps/api/storage/framework/views/.gitignore
+apps/api/storage/logs/*
+!apps/api/storage/logs/.gitignore
+apps/api/storage/*.key
+apps/api/storage/pail/
+
+# Next.js Web
+apps/web/node_modules/
+apps/web/.next/
+apps/web/out/
+apps/web/build/
+apps/web/coverage/
+apps/web/.vercel/
+apps/web/.turbo/
+*.tsbuildinfo
+apps/web/next-env.d.ts
+
+# Optional Flutter/mobile workspace if added later
+apps/mobile/.dart_tool/
+apps/mobile/.packages
+apps/mobile/.flutter-plugins
+apps/mobile/.flutter-plugins-dependencies
+apps/mobile/build/
+apps/mobile/coverage/
+apps/mobile/android/local.properties
+apps/mobile/android/.gradle/
+apps/mobile/android/app/debug/
+apps/mobile/android/app/profile/
+apps/mobile/android/app/release/
+apps/mobile/ios/Flutter/ephemeral/
+apps/mobile/macos/Flutter/ephemeral/

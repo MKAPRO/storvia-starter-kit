@@ -1,0 +1,544 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/keenicons.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   STORVIA DESIGN SYSTEM
+   R02 — Visual Identity Refinement · Navy / Cloud Blue / Cyan
+   ========================================================= */
+
+@theme inline {
+  /* Core */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-arabic: var(--font-ibm-plex-sans-arabic);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+
+  /* Surfaces */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-muted-foreground: var(--surface-muted-foreground);
+
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-elevated-foreground: var(--surface-elevated-foreground);
+
+  --color-surface-interactive: var(--surface-interactive);
+  --color-surface-interactive-foreground: var(--surface-interactive-foreground);
+
+  --color-overlay: var(--overlay);
+  --color-overlay-foreground: var(--overlay-foreground);
+
+  /* Brand identity */
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-ice: var(--brand-ice);
+
+  /* Brand / Interactive */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  /* Muted */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Semantic states */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  /* Controls */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Workspace shell */
+  --color-workspace-rail: var(--workspace-rail);
+  --color-workspace-rail-foreground: var(--workspace-rail-foreground);
+  --color-workspace-rail-muted: var(--workspace-rail-muted);
+  --color-workspace-rail-active: var(--workspace-rail-active);
+  --color-workspace-rail-border: var(--workspace-rail-border);
+  --color-workspace-panel: var(--workspace-panel);
+  --color-workspace-panel-border: var(--workspace-panel-border);
+  --color-workspace-panel-active: var(--workspace-panel-active);
+  --color-workspace-panel-active-foreground: var(--workspace-panel-active-foreground);
+  --color-workspace-header: var(--workspace-header);
+  --color-workspace-header-border: var(--workspace-header-border);
+  --color-workspace-search: var(--workspace-search);
+  --color-workspace-background: var(--workspace-background);
+  --color-workspace-content-border: var(--workspace-content-border);
+  --color-workspace-table-head: var(--workspace-table-head);
+  --color-workspace-row-hover: var(--workspace-row-hover);
+  --color-workspace-storage-card: var(--workspace-storage-card);
+
+  /* Spacing rhythm — 4px base unit */
+  --spacing: 0.25rem;
+
+  /* Radius family — exact STORVIA shape language */
+  --radius-sm: 0.375rem;
+  /* 6px */
+  --radius-md: 0.5rem;
+  /* 8px */
+  --radius-lg: 0.75rem;
+  /* 12px */
+  --radius-xl: 1rem;
+  /* 16px */
+  --radius-2xl: 1.25rem;
+  /* 20px */
+  --radius-3xl: 1.5rem;
+  /* 24px */
+  --radius-4xl: 2rem;
+  /* 32px */
+
+  /* Elevation — restrained enterprise shadows */
+  --shadow-xs: var(--storvia-shadow-xs);
+  --shadow-sm: var(--storvia-shadow-sm);
+  --shadow-md: var(--storvia-shadow-md);
+  --shadow-lg: var(--storvia-shadow-lg);
+}
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+
+  --radius: 0.75rem;
+
+  /* STORVIA brand spectrum */
+  --brand-navy: oklch(0.30 0.09 250);
+  --brand-blue: oklch(0.52 0.17 245);
+  --brand-cyan: oklch(0.70 0.13 210);
+  --brand-ice: oklch(0.955 0.028 215);
+
+  /* Foundation */
+  --background: oklch(0.982 0.007 238);
+  --foreground: oklch(0.205 0.035 250);
+
+  /* Primary surfaces */
+  --card: oklch(0.998 0.003 235);
+  --card-foreground: oklch(0.205 0.035 250);
+
+  --popover: oklch(0.998 0.003 235);
+  --popover-foreground: oklch(0.205 0.035 250);
+
+  /* Deep Cloud Blue */
+  --primary: oklch(0.455 0.16 252);
+  --primary-foreground: oklch(0.985 0.006 225);
+
+  /* Secondary */
+  --secondary: oklch(0.952 0.018 235);
+  --secondary-foreground: oklch(0.285 0.055 248);
+
+  /* Muted */
+  --muted: oklch(0.955 0.012 235);
+  --muted-foreground: oklch(0.50 0.035 245);
+
+  /* Cyan mist */
+  --accent: oklch(0.94 0.04 210);
+  --accent-foreground: oklch(0.29 0.085 235);
+
+  /* Semantic states */
+  --success: oklch(0.57 0.15 153);
+  --success-foreground: oklch(0.985 0.01 150);
+
+  --warning: oklch(0.76 0.15 78);
+  --warning-foreground: oklch(0.28 0.065 62);
+
+  --info: oklch(0.63 0.135 215);
+  --info-foreground: oklch(0.985 0.008 215);
+
+  --destructive: oklch(0.58 0.22 28);
+  --destructive-foreground: oklch(0.985 0.008 25);
+
+  /* Controls */
+  --border: oklch(0.895 0.018 238);
+  --input: oklch(0.91 0.018 238);
+  --ring: oklch(0.56 0.16 242);
+
+  /* STORVIA surface hierarchy */
+  --surface: oklch(0.969 0.012 235);
+  --surface-foreground: oklch(0.245 0.04 248);
+
+  --surface-muted: oklch(0.944 0.016 232);
+  --surface-muted-foreground: oklch(0.49 0.035 245);
+
+  --surface-elevated: oklch(0.995 0.004 230);
+  --surface-elevated-foreground: oklch(0.215 0.035 248);
+
+  --surface-interactive: oklch(0.948 0.030 222);
+  --surface-interactive-foreground: oklch(0.285 0.07 242);
+
+  --overlay: oklch(0.995 0.004 230);
+  --overlay-foreground: oklch(0.215 0.035 248);
+
+  /* Elevation */
+  --storvia-shadow-xs: 0 1px 2px rgb(15 23 42 / 0.04);
+  --storvia-shadow-sm:
+    0 1px 3px rgb(15 23 42 / 0.06),
+    0 1px 2px rgb(15 23 42 / 0.04);
+  --storvia-shadow-md:
+    0 8px 24px -8px rgb(15 23 42 / 0.12),
+    0 2px 6px rgb(15 23 42 / 0.05);
+  --storvia-shadow-lg:
+    0 18px 48px -18px rgb(15 23 42 / 0.22),
+    0 8px 18px -12px rgb(15 23 42 / 0.10);
+
+  /* Data visualization */
+  --chart-1: oklch(0.455 0.16 252);
+  --chart-2: oklch(0.64 0.145 220);
+  --chart-3: oklch(0.66 0.135 195);
+  --chart-4: oklch(0.61 0.14 155);
+  --chart-5: oklch(0.74 0.13 80);
+
+  /* Sidebar */
+  --sidebar: oklch(0.993 0.005 235);
+  --sidebar-foreground: oklch(0.255 0.04 248);
+
+  --sidebar-primary: oklch(0.455 0.16 252);
+  --sidebar-primary-foreground: oklch(0.985 0.006 225);
+
+  --sidebar-accent: oklch(0.942 0.032 224);
+  --sidebar-accent-foreground: oklch(0.29 0.075 242);
+
+  --sidebar-border: oklch(0.90 0.018 238);
+  --sidebar-ring: oklch(0.56 0.16 242);
+
+  /* Workspace shell */
+  --workspace-rail: oklch(0.225 0.065 250);
+  --workspace-rail-foreground: oklch(0.965 0.01 225);
+  --workspace-rail-muted: oklch(0.72 0.03 232);
+  --workspace-rail-active: oklch(0.31 0.075 245);
+  --workspace-rail-border: oklch(0.35 0.05 245 / 0.55);
+  --workspace-panel: oklch(0.992 0.005 235);
+  --workspace-panel-border: oklch(0.90 0.018 238);
+  --workspace-panel-active: oklch(0.945 0.035 225);
+  --workspace-panel-active-foreground: oklch(0.31 0.085 242);
+  --workspace-header: oklch(0.995 0.004 232);
+  --workspace-header-border: oklch(0.90 0.018 238);
+  --workspace-search: oklch(0.955 0.012 235);
+  --workspace-background: oklch(0.972 0.009 238);
+  --workspace-content-border: oklch(0.902 0.017 238);
+  --workspace-table-head: oklch(0.968 0.009 235);
+  --workspace-row-hover: oklch(0.958 0.022 225);
+  --workspace-storage-card: oklch(0.982 0.008 235);
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+.dark {
+  color-scheme: dark;
+
+  /* STORVIA brand spectrum — dark optimized */
+  --brand-navy: oklch(0.20 0.065 250);
+  --brand-blue: oklch(0.68 0.145 235);
+  --brand-cyan: oklch(0.76 0.12 200);
+  --brand-ice: oklch(0.30 0.055 215);
+
+  /* Deep navy foundation — intentionally not pure black */
+  --background: oklch(0.14 0.026 248);
+  --foreground: oklch(0.94 0.012 225);
+
+  /* Elevated surfaces */
+  --card: oklch(0.175 0.028 248);
+  --card-foreground: oklch(0.94 0.012 225);
+
+  --popover: oklch(0.19 0.03 245);
+  --popover-foreground: oklch(0.94 0.012 225);
+
+  /* Cloud Blue — dark optimized */
+  --primary: oklch(0.70 0.14 232);
+  --primary-foreground: oklch(0.14 0.035 248);
+
+  /* Secondary */
+  --secondary: oklch(0.235 0.032 242);
+  --secondary-foreground: oklch(0.91 0.015 225);
+
+  /* Muted */
+  --muted: oklch(0.225 0.028 242);
+  --muted-foreground: oklch(0.68 0.025 225);
+
+  /* Cyan mist */
+  --accent: oklch(0.245 0.055 218);
+  --accent-foreground: oklch(0.91 0.04 205);
+
+  /* Semantic states */
+  --success: oklch(0.66 0.14 153);
+  --success-foreground: oklch(0.145 0.028 155);
+
+  --warning: oklch(0.78 0.14 80);
+  --warning-foreground: oklch(0.18 0.045 65);
+
+  --info: oklch(0.70 0.13 205);
+  --info-foreground: oklch(0.145 0.035 220);
+
+  --destructive: oklch(0.66 0.18 27);
+  --destructive-foreground: oklch(0.985 0.008 25);
+
+  /* Controls */
+  --border: oklch(0.285 0.032 242);
+  --input: oklch(0.255 0.032 242);
+  --ring: oklch(0.70 0.14 225);
+
+  /* Surface hierarchy */
+  --surface: oklch(0.17 0.028 245);
+  --surface-foreground: oklch(0.92 0.013 225);
+
+  --surface-muted: oklch(0.205 0.03 240);
+  --surface-muted-foreground: oklch(0.68 0.025 225);
+
+  --surface-elevated: oklch(0.19 0.03 242);
+  --surface-elevated-foreground: oklch(0.94 0.012 225);
+
+  --surface-interactive: oklch(0.225 0.05 225);
+  --surface-interactive-foreground: oklch(0.91 0.03 210);
+
+  --overlay: oklch(0.205 0.03 242);
+  --overlay-foreground: oklch(0.94 0.012 225);
+
+  /* Elevation */
+  --storvia-shadow-xs: 0 1px 2px rgb(0 0 0 / 0.18);
+  --storvia-shadow-sm:
+    0 2px 8px -4px rgb(0 0 0 / 0.32),
+    0 1px 2px rgb(0 0 0 / 0.20);
+  --storvia-shadow-md:
+    0 12px 32px -12px rgb(0 0 0 / 0.45),
+    0 3px 8px -4px rgb(0 0 0 / 0.28);
+  --storvia-shadow-lg:
+    0 24px 64px -24px rgb(0 0 0 / 0.60),
+    0 10px 24px -16px rgb(0 0 0 / 0.42);
+
+  /* Data visualization */
+  --chart-1: oklch(0.70 0.14 232);
+  --chart-2: oklch(0.74 0.12 205);
+  --chart-3: oklch(0.72 0.12 180);
+  --chart-4: oklch(0.72 0.12 150);
+  --chart-5: oklch(0.80 0.12 82);
+
+  /* Sidebar */
+  --sidebar: oklch(0.158 0.03 246);
+  --sidebar-foreground: oklch(0.91 0.015 225);
+
+  --sidebar-primary: oklch(0.70 0.14 232);
+  --sidebar-primary-foreground: oklch(0.14 0.035 248);
+
+  --sidebar-accent: oklch(0.225 0.05 228);
+  --sidebar-accent-foreground: oklch(0.91 0.03 210);
+
+  --sidebar-border: oklch(0.265 0.032 242);
+  --sidebar-ring: oklch(0.70 0.14 225);
+
+  /* Workspace shell */
+  --workspace-rail: oklch(0.125 0.035 250);
+  --workspace-rail-foreground: oklch(0.94 0.012 225);
+  --workspace-rail-muted: oklch(0.67 0.03 230);
+  --workspace-rail-active: oklch(0.235 0.072 235);
+  --workspace-rail-border: oklch(0.27 0.035 242 / 0.70);
+  --workspace-panel: oklch(0.165 0.028 246);
+  --workspace-panel-border: oklch(0.265 0.032 242);
+  --workspace-panel-active: oklch(0.225 0.055 225);
+  --workspace-panel-active-foreground: oklch(0.90 0.04 208);
+  --workspace-header: oklch(0.16 0.027 246);
+  --workspace-header-border: oklch(0.265 0.032 242);
+  --workspace-search: oklch(0.21 0.028 242);
+  --workspace-background: oklch(0.14 0.026 248);
+  --workspace-content-border: oklch(0.27 0.03 242);
+  --workspace-table-head: oklch(0.185 0.028 242);
+  --workspace-row-hover: oklch(0.205 0.04 230);
+  --workspace-storage-card: oklch(0.19 0.03 242);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply bg-background font-sans;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 22%, transparent);
+  }
+
+  html[lang="en"] body {
+    font-family: var(--font-geist-sans), sans-serif;
+  }
+
+  html[lang="ar"] body {
+    font-family: var(--font-ibm-plex-sans-arabic), sans-serif;
+    line-height: 1.7;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-geist-mono), monospace;
+  }
+}
+
+
+/* =========================================================
+   POST-28F R2B — Dashboard motion
+   CSS/SVG only; no runtime animation dependency.
+   ========================================================= */
+
+@keyframes storvia-chart-kpi-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes storvia-chart-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes storvia-chart-bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes storvia-chart-line-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes storvia-chart-donut-reveal {
+  from {
+    opacity: 0.25;
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes storvia-chart-pulse-enter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.storvia-chart-kpi-enter {
+  animation: storvia-chart-kpi-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.storvia-chart-card-enter {
+  animation: storvia-chart-card-enter 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.storvia-chart-bar {
+  transform-origin: left center;
+  animation: storvia-chart-bar-grow 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
+}
+
+[dir="rtl"] .storvia-chart-bar {
+  transform-origin: right center;
+}
+
+.storvia-chart-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: storvia-chart-line-draw 920ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.storvia-chart-donut-segment {
+  animation: storvia-chart-donut-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.storvia-chart-pulse-enter {
+  animation: storvia-chart-pulse-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .storvia-chart-kpi-enter,
+  .storvia-chart-card-enter,
+  .storvia-chart-bar,
+  .storvia-chart-line,
+  .storvia-chart-donut-segment,
+  .storvia-chart-pulse-enter {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .storvia-chart-bar {
+    transform: none !important;
+  }
+
+  .storvia-chart-line {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
