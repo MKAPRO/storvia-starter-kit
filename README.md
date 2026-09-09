@@ -1,5 +1,5 @@
 # STORVIA Starter Kit
-
+![STORVIA Starter Kit](assets/storvia-starter-banner.png)
 STORVIA Starter Kit is a self-hosted file-management foundation built with Laravel and Next.js. It provides a secure core workspace for personal and department storage, administration, quotas, file policies, privacy controls, and bilingual RTL/LTR operation.
 
 ## Highlights
